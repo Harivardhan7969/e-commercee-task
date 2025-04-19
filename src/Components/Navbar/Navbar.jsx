@@ -29,7 +29,7 @@ const Navbar = ({ cartCount }) => {
                     <ul className="hidden lg:flex items-center gap-4 font-medium text-gray-800">
                         {["Home", "Men", "Women", "Kids"].map((item) => (
                             <li
-                                onClick={() => navigate("/")}
+                                onClick={() => navigate("/e-commercee-task")}
                                 key={item}
                                 className="cursor-pointer hover:text-blue-600 hover:scale-105 transition duration-300"
                             >
