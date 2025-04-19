@@ -1,4 +1,3 @@
-
 import DealCard from './DealCard';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -13,27 +12,43 @@ const Deal = () => {
     slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 500,
+    autoplaySpeed: 2000,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1536, // 2xl
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        }
+          slidesToShow: 5,
+        },
       },
       {
-        breakpoint: 600,
+        breakpoint: 1280, // xl
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 1024, // lg
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768, // md
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480, // sm
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      }
+        },
+      },
     ]
   };
 
   return (
-    <div className='py-5 lg:px-20'>
+    <div className='py-6 px-4 sm:px-6 md:px-10 lg:px-20'>
       <Slider {...settings}>
         {products.map((item, index) => (
           <DealCard key={index} item={item} />
