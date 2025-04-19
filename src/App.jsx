@@ -17,9 +17,10 @@ function App() {
 
   return (
     <>
+
       <Navbar cartCount={cartCount} />
       <Routes>
-        <Route path="/" element={<Product setCartCount={setCartCount} />} />
+        <Route path="/e-commercee-task" element={<Product setCartCount={setCartCount} />} />
         <Route path='/cart' element={<Cart cartCount={cartCount} setCartCount={setCartCount} />} />
         <Route path='/product-details/:id' element={<ProductDetails setCartCount={setCartCount} />} />
         <Route path='/api-products' element={<Products />} />
